@@ -11,15 +11,24 @@ Usage
         "github.com/iwat/go-seckeychain"
     )
     
-    func main() {
-        password, err := seckeychain.FindGenericPassword("example.com", "admin")
-            if err != nil {
-                println(err.Error())
-                os.Exit(2)
-            }
-
-            println(password)
+    func testFindInternet() {
+        password, err := seckeychain.FindInternetPassword("example.com", "", "admin", "", uint16(22), seckeychain.ProtocolTypeSSH, seckeychain.AuthenticationTypeAny)
+        if err != nil {
+            println(err.Error())
+            os.Exit(2)
         }
+
+        println(password)
+    }
+
+    func testFindGeneric() {
+        password, err := seckeychain.FindGenericPassword("example.com", "admin")
+        if err != nil {
+            println(err.Error())
+            os.Exit(2)
+        }
+
+        println(password)
     }
 
 Legal
