@@ -1,4 +1,7 @@
 // Native OS X Security.framework binding for Golang.
+
+// +build darwin,cgo
+
 package seckeychain
 
 // See https://developer.apple.com/library/mac/documentation/Security/Reference/keychainservices/index.html for the APIs used below.
