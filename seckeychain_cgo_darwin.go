@@ -1,4 +1,9 @@
-// Native OS X Security.framework binding for Golang.
+// go-seckeychain - Native OS X Security.framework binding for Golang
+
+// Copyright (c) 2015 Chaiwat Shuetrakoonpaiboon. All rights reserved.
+//
+// Use of this source code is governed by a MIT license that can be found in
+// the LICENSE file.
 
 // +build darwin,cgo
 
